@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteCond %{REQUEST_fileNAME} !-d 
+RewriteRule ^([a-zA-Z0-9_/-]+)/?(&(.+))?$ index.php?sym=$1&$3
